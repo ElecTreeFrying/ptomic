@@ -1,0 +1,231 @@
+<div id="wrapper">
+
+  <mat-toolbar>
+    <div class="container">
+      <mat-toolbar>
+        <span>Ptomic</span>
+      </mat-toolbar>
+    </div>
+  </mat-toolbar>
+
+  <div id="content" data-simplebar>
+    <div class="container">
+
+      <div id="top-row">
+        <div id="details">
+          <div>
+            <p>Extract</p>
+            <h4>Philippine Grape Seed</h4>
+          </div>
+          <div>
+            <p>Date and Time</p>
+            <h4>{{ datetime.date }}</h4>
+            <h4>{{ datetime.time }}</h4>
+          </div>
+        </div>
+        <div id="others">
+          <h5>TSL235R Readings (parameters in the root)</h5>
+          <mat-divider></mat-divider>
+          <div>
+            <div>
+              <p>Sample Solution</p>
+              <mat-form-field color="accent" appearance="fill">
+                <mat-label>Intensity</mat-label>
+                <input matInput type="text" [formControl]="control.sampleCtrl">
+              </mat-form-field>
+            </div>
+            <div>
+              <p>Reference Solution</p>
+              <mat-form-field color="accent" appearance="fill">
+                <mat-label>Intensity</mat-label>
+                <input matInput type="text" [formControl]="control.referenceCtrl">
+              </mat-form-field>
+            </div>
+          </div>
+          <div>
+            <!-- <button mat-raised-button [disabled]="analyze.isStart" (click)="startAnalyze()">START ANALYZE</button>
+            <button mat-raised-button [disabled]="analyze.isAgain" (click)="analyzeAgain()">ANALYZE AGAIN</button> -->
+            <button mat-raised-button disabled (click)="startAnalyze()">START ANALYZE</button>
+            <button mat-raised-button disabled (click)="analyzeAgain()">ANALYZE AGAIN</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="top-row">
+        <div id="details">
+          <div>
+            <p>Extract</p>
+            <h4>Philippine Grape Seed</h4>
+          </div>
+          <div>
+            <p>Date and Time</p>
+            <h4>{{ datetime.date }}</h4>
+            <h4>{{ datetime.time }}</h4>
+          </div>
+        </div>
+        <div id="others">
+          <h5>TSL235R Readings (parameters inside readings collection)</h5>
+          <mat-divider></mat-divider>
+          <div>
+            <div>
+              <p>Sample Solution</p>
+              <mat-form-field color="accent" appearance="fill">
+                <mat-label>Intensity</mat-label>
+                <input matInput type="text" [formControl]="control.sampleCtrl">
+              </mat-form-field>
+            </div>
+            <div>
+              <p>Reference Solution</p>
+              <mat-form-field color="accent" appearance="fill">
+                <mat-label>Intensity</mat-label>
+                <input matInput type="text" [formControl]="control.referenceCtrl">
+              </mat-form-field>
+            </div>
+          </div>
+          <div>
+            <!-- <button mat-raised-button [disabled]="analyze.isStart" (click)="startAnalyze()">START ANALYZE</button>
+            <button mat-raised-button [disabled]="analyze.isAgain" (click)="analyzeAgain()">ANALYZE AGAIN</button> -->
+            <button mat-raised-button disabled (click)="startAnalyze()">START ANALYZE</button>
+            <button mat-raised-button disabled (click)="analyzeAgain()">ANALYZE AGAIN</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="middle-row">
+        <h2>Readings</h2>
+        <mat-divider></mat-divider>
+
+        <div>
+          <div>
+            <mat-accordion [multi]="false">
+
+              <h5>Individual Solutions</h5>
+              <mat-divider></mat-divider>
+
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>Sample</mat-panel-title>
+                </mat-expansion-panel-header>
+                <ng-template matExpansionPanelContent>
+                  <div>
+                    <p>Solution</p>
+                    <mat-form-field color="accent" appearance="fill">
+                      <mat-label>Intensity</mat-label>
+                      <input matInput type="text" [formControl]="control.sampleIntensityCtrl">
+                    </mat-form-field>
+                  </div>
+                  <div>
+                    <p>Transmittance</p>
+                    <mat-form-field color="accent" appearance="fill">
+                      <mat-label>Intensity</mat-label>
+                      <input matInput type="text" [formControl]="control.sampleTransmittanceCtrl">
+                    </mat-form-field>
+                  </div>
+                  <div>
+                    <p>Absorbance</p>
+                    <mat-form-field color="accent" appearance="fill">
+                      <mat-label>Intensity</mat-label>
+                      <input matInput type="text" [formControl]="control.sampleAbsorbanceCtrl">
+                    </mat-form-field>
+                  </div>
+                </ng-template>
+              </mat-expansion-panel>
+
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>Reference</mat-panel-title>
+                </mat-expansion-panel-header>
+                <ng-template matExpansionPanelContent>
+                  <div>
+                    <p>Solution</p>
+                    <mat-form-field color="accent" appearance="fill">
+                      <mat-label>Intensity</mat-label>
+                      <input matInput type="text" [formControl]="control.referenceIntensityCtrl">
+                    </mat-form-field>
+                  </div>
+                  <div>
+                    <p>Transmittance</p>
+                    <mat-form-field color="accent" appearance="fill">
+                      <mat-label>Intensity</mat-label>
+                      <input matInput type="text" [formControl]="control.referenceTransmittanceCtrl">
+                    </mat-form-field>
+                  </div>
+                  <div>
+                    <p>Absorbance</p>
+                    <mat-form-field color="accent" appearance="fill">
+                      <mat-label>Intensity</mat-label>
+                      <input matInput type="text" [formControl]="control.referenceAbsorbanceCtrl">
+                    </mat-form-field>
+                  </div>
+                </ng-template>
+              </mat-expansion-panel>
+
+            </mat-accordion>
+          </div>
+          <div>
+
+            <h5>Data</h5>
+            <mat-divider></mat-divider>
+
+            <div>
+              <div>
+                <p>Net Change in Intensity</p>
+                <mat-form-field color="accent" appearance="fill">
+                  <mat-label>Factor</mat-label>
+                  <input matInput type="text" [formControl]="control.netChangeCtrl">
+                </mat-form-field>
+              </div>
+              <div>
+                <p>Transmittance</p>
+                <mat-form-field color="accent" appearance="fill">
+                  <mat-label>Factor</mat-label>
+                  <input matInput type="text" [formControl]="control.transmittanceCtrl">
+                </mat-form-field>
+              </div>
+              <div>
+                <p>% Transmittance</p>
+                <mat-form-field color="accent" appearance="fill">
+                  <mat-label>Factor</mat-label>
+                  <input matInput type="text" [formControl]="control.perTransmittanceCtrl">
+                </mat-form-field>
+              </div>
+              <div>
+                <p>Absorbance</p>
+                <mat-form-field color="accent" appearance="fill">
+                  <mat-label>Factor</mat-label>
+                  <input matInput type="text" [formControl]="control.absorbanceCtrl">
+                </mat-form-field>
+              </div>
+              <div>
+                <p>Concentration</p>
+                <mat-form-field color="accent" appearance="fill">
+                  <mat-label>Factor</mat-label>
+                  <input matInput type="text" [formControl]="control.concentrationCtrl">
+                </mat-form-field>
+              </div>
+              <div>
+                <p>% Radical Scavenging Acivivty</p>
+                <mat-form-field color="accent" appearance="fill">
+                  <mat-label>Factor</mat-label>
+                  <input matInput type="text" [formControl]="control.rsaCtrl">
+                </mat-form-field>
+              </div>
+            </div>
+
+            <h5>Graphs</h5>
+            <mat-divider></mat-divider>
+
+            <div>
+
+              <canvas id="lineChart"></canvas>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

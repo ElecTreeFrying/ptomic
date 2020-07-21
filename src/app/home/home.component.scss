@@ -1,0 +1,198 @@
+#wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  position: relative;
+  z-index: 1;
+
+  > .mat-toolbar {
+    position: fixed;
+    z-index: 2;
+
+    .container > .mat-toolbar {
+      padding: 0;
+
+      > span,
+      > .mat-icon {
+        margin-right: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  #content {
+    padding-top: 64px;
+    height: 100vh;
+    overflow-y: auto;
+
+    > .container {
+      display: flex;
+      flex-flow: row wrap;
+    }
+  }
+}
+
+#top-row {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 1 100%;
+  margin-top: 5vh;
+
+  .mat-divider {
+    margin-bottom: 2vh;
+  }
+
+  p {
+    margin: 0;
+    color: rgb(154, 154, 154);
+  }
+
+  > div:first-child {
+    flex: 1 1 30%;
+  }
+
+  > div:last-child {
+    flex: 1 1 60%;
+  }
+
+  #details > div:first-child {
+    margin-bottom: 2vh;
+  }
+
+  #others {
+    > div:last-child >.mat-raised-button {
+      margin-right: 1vw;
+    }
+
+    > div {
+      display: flex;
+      flex-flow: row wrap;
+
+      div:first-child {
+        margin-right: 1vw;
+      }
+    }
+  }
+}
+
+#middle-row {
+  flex: 1 1 100%;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+
+  .mat-divider {
+    margin-bottom: 2vh;
+  }
+
+  .mat-expansion-panel {
+    width: 249px;
+  }
+
+  .mat-expansion-panel p {
+    font-size: 12px;
+    color: rgb(210, 210, 210);
+  }
+
+  p {
+    margin: 0;
+  }
+
+  > div {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  > div > div:first-child {
+    flex: 0 1 15%;
+
+    .mat-form-field {
+      width: 100%;
+    }
+  }
+
+  > div > div:last-child {
+    flex: 0 1 75%;
+    padding-left: 3vw;
+
+    > div {
+      display: flex;
+      flex-flow: row wrap;
+
+      div {
+        flex: 1 1 30%;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  #details {
+    margin-bottom: 15px;
+    p {
+      font-size: 12px;
+    }
+    h4 {
+      font-size: 16px;
+    }
+  }
+
+  #top-row {
+    > div:first-child {
+      flex: 1 1 100%;
+    }
+    > div:last-child {
+      flex: 1 1 100%;
+    }
+  }
+
+  #middle-row > div {
+    div:first-child {
+      flex: 1 0 100%;
+    }
+    div:last-child {
+      flex: 1 0 100%;
+      padding: 0;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.iiitem {
+
+}
