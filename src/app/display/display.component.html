@@ -1,0 +1,89 @@
+
+<app-toolbar-info></app-toolbar-info>
+
+<div class="content wrap">
+
+  <div class="info">
+
+    <mat-card class="details">
+  
+      <mat-card-content>
+  
+        <div class="sections">
+          <p class="label">Extract</p>
+          <p class="value">Philippine Grape Seed</p>
+        </div>
+        
+        <div class="sections">
+          <p class="label">Date and time</p>
+          <p class="value">{{ shared.date }}</p>
+          <p class="value time">{{ time }}</p>
+        </div>
+  
+      </mat-card-content>
+  
+    </mat-card>
+  
+    <mat-card class="actions">
+  
+      <mat-card-content>
+        
+        <p class="label">Actions</p>
+
+        <mat-divider></mat-divider>
+
+        <div class="buttons">
+          <button mat-stroked-button (click)="readLatest()">Analyze</button>
+          <button mat-stroked-button (click)="refresh()">Refresh</button>
+        </div>
+
+      </mat-card-content>
+  
+    </mat-card>
+
+  </div>
+
+
+  <div class="data">
+    
+    <div class="data-container">
+
+      <mat-card>
+    
+        <mat-card-content>
+    
+          <p class="label">Sample solution</p>
+  
+          <mat-divider></mat-divider>
+  
+          <mat-form-field color="accent" appearance="outline">
+            <mat-label>Readings</mat-label>
+            <input matInput type="text" disabled autocomplete="off" [(ngModel)]="database.sample">
+          </mat-form-field>
+          
+        </mat-card-content>
+    
+      </mat-card>
+  
+      <mat-card>
+    
+        <mat-card-content>
+    
+          <p class="label">Reference solution</p>
+  
+          <mat-divider></mat-divider>
+  
+          <mat-form-field color="accent" appearance="outline">
+            <mat-label>Readings</mat-label>
+            <input matInput type="text" disabled autocomplete="off" [(ngModel)]="database.reference">
+          </mat-form-field>
+    
+        </mat-card-content>
+    
+      </mat-card>
+
+    </div>
+
+  </div>
+
+</div>

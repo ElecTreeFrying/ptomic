@@ -15,4 +15,4 @@ import { MatBadgeModule } from '@angular/material/badge';
     MatBadgeModule
   ]
 })
-export class DashboardMaterialModule { }
+export class ToolbarInfoMaterialModule { }

@@ -39,6 +39,14 @@
               "./node_modules/simplebar/dist/simplebar.min.js"
             ],
             "allowedCommonJsDependencies": [
+              "firebase",
+              "@firebase/app",
+              "@firebase/auth",
+              "@firebase/database",
+              "@firebase/firestore",
+              "@firebase/component",
+              "@firebase/util",
+              "core-js",
               "chart.js"
             ]
           },

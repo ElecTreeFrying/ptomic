@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
-import { DashboardMaterialModule } from '../_common/modules/material/dashboard-material.module';
+import { DashboardMaterialModule } from '../_common/material/dashboard-material.module';
+import { ToolbarInfoModule } from '../_components/toolbar-info/toolbar-info.module';
 
 import { DashboardComponent } from './dashboard.component';
 
@@ -14,7 +15,8 @@ import { DashboardComponent } from './dashboard.component';
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    DashboardMaterialModule
+    DashboardMaterialModule,
+    ToolbarInfoModule
   ]
 })
 export class DashboardModule { }

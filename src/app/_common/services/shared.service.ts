@@ -10,7 +10,7 @@ export class SharedService {
   constructor() { }
 
   get date() {
-    return moment().format('dddd, MMMM Do YYYY');
+    return moment().format('dddd, MMMM D YYYY');
   }
 
   get time() {

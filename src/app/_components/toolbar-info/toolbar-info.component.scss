@@ -1,0 +1,30 @@
+
+.mat-toolbar {
+
+  .wrap {
+    padding-right: 0;
+    display: flex;
+  }
+
+  .toolbar-title {
+    margin-right: auto;
+    display: flex;
+
+    span {
+      margin: auto;
+    }
+  }
+
+  .toolbar-icon {
+    display: flex;
+    margin: 0 8px;
+
+    .mat-icon {
+      margin: auto;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
