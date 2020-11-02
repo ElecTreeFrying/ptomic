@@ -1,4 +1,8 @@
 
+.mat-progress-bar {
+  position: absolute;
+}
+
 .content {
   display: flex;
   flex-flow: row wrap;
@@ -39,6 +43,7 @@
 
     .label {
       font-size: 20px;
+      transform: translateY(-4px);
     }
 
     .buttons {
@@ -58,9 +63,8 @@
   display: flex;
   flex-direction: row-reverse;
   flex-grow: 1;
-  align-self: stretch;
   width: calc(100% - 300px);
-  
+
   .data-container {
     display: flex;
     flex-flow: row wrap;
@@ -87,6 +91,28 @@
       .mat-form-field {
         width: 100%;
         margin-top: 16px;
+      }
+    }
+  }
+
+  .results {
+    margin-top: 24px;
+    width: 100%; 
+
+    .mat-selection-list {
+      margin-top: -16px;
+    }
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .mat-card-actions {
+      padding: 0;
+
+      .mat-stroked-button {
+        width: 100%;
       }
     }
   }

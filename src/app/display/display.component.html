@@ -1,6 +1,8 @@
 
 <app-toolbar-info></app-toolbar-info>
 
+<mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
+
 <div class="content wrap">
 
   <div class="info">
@@ -34,6 +36,8 @@
 
         <div class="buttons">
           <button mat-stroked-button (click)="readLatest()">Analyze</button>
+          <button mat-stroked-button (click)="showData()">Show data</button>
+          <button mat-stroked-button (click)="showGraph()">Show graph</button>
           <button mat-stroked-button (click)="refresh()">Refresh</button>
         </div>
 
@@ -80,6 +84,52 @@
     
         </mat-card-content>
     
+      </mat-card>
+
+      <mat-card class="results">
+
+        <mat-card-content>
+
+          <mat-selection-list multiple="false">
+            <mat-list-option *ngFor="let item of [0,0,0,0,0,0,0,0,0,0]">
+              <div class="item">
+                <span>517 nm</span>
+                <span>10/15/20 : 6:16 pm</span>
+              </div>
+            </mat-list-option>
+          </mat-selection-list>
+
+          <mat-divider></mat-divider>
+
+        </mat-card-content>
+        
+        <mat-card-actions>
+          <button mat-stroked-button (click)="showData(1)">Show all</button>
+        </mat-card-actions>
+
+      </mat-card>
+
+      <mat-card class="results">
+
+        <mat-card-content>
+
+          <mat-selection-list multiple="false">
+            <mat-list-option *ngFor="let item of [0,0,0,0,0,0,0,0,0,0]">
+              <div class="item">
+                <span>517 nm</span>
+                <span>10/15/20 : 6:16 pm</span>
+              </div>
+            </mat-list-option>
+          </mat-selection-list>
+
+          <mat-divider></mat-divider>
+
+        </mat-card-content>
+        
+        <mat-card-actions>
+          <button mat-stroked-button (click)="showData(2)">Show all</button>
+        </mat-card-actions>
+
       </mat-card>
 
     </div>
