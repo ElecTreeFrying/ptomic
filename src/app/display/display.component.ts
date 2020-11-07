@@ -18,10 +18,11 @@ export class DisplayComponent implements OnInit {
   time: string;
   database: any;
   isLoading: boolean;
+  allReadings: any;
 
   constructor(
     private dialog: MatDialog,
-    private fire: FirebaseService,
+    public fire: FirebaseService,
     public shared: SharedService
   ) { }
 
@@ -37,11 +38,20 @@ export class DisplayComponent implements OnInit {
       this.isLoading = false;
     }, 5000);
 
+    // this.fire.listener();
+
     this.database = {};
     this.database.latestReadings = null;
     this.database.sample = '0 nm';
     this.database.reference = '0 nm';
     this.isLoading = true;
+    
+    this.allReadings = this.fire.allReadings;
+
+    this.fire.latestReadings.subscribe((response: any) => {
+      this.database.sample = response.reading;
+    });
+
   }
 
   readLatest() {

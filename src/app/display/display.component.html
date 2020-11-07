@@ -69,7 +69,7 @@
     
       </mat-card>
   
-      <mat-card>
+      <!-- <mat-card>
     
         <mat-card-content>
     
@@ -84,17 +84,17 @@
     
         </mat-card-content>
     
-      </mat-card>
+      </mat-card> -->
 
       <mat-card class="results">
 
         <mat-card-content>
 
           <mat-selection-list multiple="false">
-            <mat-list-option *ngFor="let item of [0,0,0,0,0,0,0,0,0,0]">
+            <mat-list-option *ngFor="let data of (allReadings | async); let isFirst = first">
               <div class="item">
-                <span>517 nm</span>
-                <span>10/15/20 : 6:16 pm</span>
+                <span>{{ data?.reading }} <span *ngIf="isFirst">← latest</span></span>
+                <span>{{ data?.datetime }}</span>
               </div>
             </mat-list-option>
           </mat-selection-list>
@@ -109,7 +109,7 @@
 
       </mat-card>
 
-      <mat-card class="results">
+      <!-- <mat-card class="results">
 
         <mat-card-content>
 
@@ -130,7 +130,7 @@
           <button mat-stroked-button (click)="showData(2)">Show all</button>
         </mat-card-actions>
 
-      </mat-card>
+      </mat-card> -->
 
     </div>
 

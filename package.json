@@ -23,6 +23,7 @@
     "@angular/platform-browser-dynamic": "~10.1.6",
     "@angular/router": "~10.1.6",
     "@angular/service-worker": "~10.1.6",
+    "@jengjeng/firebase-pushid-convert-timestamp": "^1.0.2",
     "animate.css": "^4.1.1",
     "bootstrap": "^4.5.3",
     "chart.js": "^2.9.3",
